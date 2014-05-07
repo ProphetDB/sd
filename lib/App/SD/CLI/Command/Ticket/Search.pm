@@ -1,5 +1,5 @@
 package App::SD::CLI::Command::Ticket::Search;
-use Any::Moose;
+use Moo;
 extends 'Prophet::CLI::Command::Search';
 with 'App::SD::CLI::Command';
 
@@ -114,9 +114,6 @@ override default_match => sub {
     return 1 if $ticket->has_active_status();
     return 0;
 };
-
-__PACKAGE__->meta->make_immutable;
-no Any::Moose;
 
 1;
 

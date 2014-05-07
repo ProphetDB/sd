@@ -1,5 +1,5 @@
 package App::SD::ForeignReplica::PushEncoder;
-use Any::Moose;
+use Moo;
 use Params::Validate;
 
 sub integrate_change {
@@ -59,8 +59,5 @@ sub integrate_change {
 }
 
 sub after_integrate_change { }
-
-no Any::Moose;
-__PACKAGE__->meta->make_immutable;
 
 1;

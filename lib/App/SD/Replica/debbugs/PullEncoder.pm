@@ -1,5 +1,5 @@
 package App::SD::Replica::debbugs::PullEncoder;
-use Any::Moose;
+use Moo;
 
 use Params::Validate qw(:all);
 use Memoize;
@@ -86,6 +86,4 @@ sub find_matching_transactions {
     return \@matched;
 }
 
-__PACKAGE__->meta->make_immutable;
-no Any::Moose;
 1;

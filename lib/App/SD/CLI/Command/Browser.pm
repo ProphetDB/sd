@@ -1,5 +1,5 @@
 package App::SD::CLI::Command::Browser;
-use Any::Moose;
+use Moo;
 
 extends 'App::SD::CLI::Command::Server';
 
@@ -14,6 +14,4 @@ override run => sub {
     $self->SUPER::run();
 };
 
-__PACKAGE__->meta->make_immutable;
-no Any::Moose;
 1;

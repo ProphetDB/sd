@@ -1,5 +1,5 @@
 package App::SD::Replica::rt::PushEncoder;
-use Any::Moose;
+use Moo;
 
 extends 'App::SD::ForeignReplica::PushEncoder';
 
@@ -124,8 +124,5 @@ sub _recode_props_for_integrate {
     }
     return \%attr;
 }
-
-__PACKAGE__->meta->make_immutable;
-no Any::Moose;
 
 1;

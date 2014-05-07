@@ -1,5 +1,5 @@
 package App::SD::CLI::Command::Ticket::Attachment::Search;
-use Any::Moose;
+use Moo;
 extends 'Prophet::CLI::Command::Search';
 with 'Prophet::CLI::RecordCommand';
 with 'App::SD::CLI::Model::Attachment';
@@ -12,9 +12,6 @@ sub get_search_callback {
         shift->prop('ticket') eq $self->uuid ? 1 : 0;
       }
 }
-
-__PACKAGE__->meta->make_immutable;
-no Any::Moose;
 
 1;
 

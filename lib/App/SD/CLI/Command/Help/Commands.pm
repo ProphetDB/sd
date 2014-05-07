@@ -1,5 +1,5 @@
 package App::SD::CLI::Command::Help::Commands;
-use Any::Moose;
+use Moo;
 extends 'App::SD::CLI::Command::Help';
 
 sub run {
@@ -54,9 +54,6 @@ type specified. See the examples given in specific help documents.
 EOF
 
 }
-
-__PACKAGE__->meta->make_immutable;
-no Any::Moose;
 
 1;
 

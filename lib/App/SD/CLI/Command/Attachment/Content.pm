@@ -1,5 +1,5 @@
 package App::SD::CLI::Command::Attachment::Content;
-use Any::Moose;
+use Moo;
 extends 'Prophet::CLI::Command::Show';
 with 'App::SD::CLI::Model::Attachment';
 with 'App::SD::CLI::Command';
@@ -13,9 +13,6 @@ sub run {
     $record->load( uuid => $self->uuid );
     print $record->prop('content');
 }
-
-__PACKAGE__->meta->make_immutable;
-no Any::Moose;
 
 1;
 

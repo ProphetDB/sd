@@ -1,5 +1,5 @@
 package App::SD::CLI::Command::Log;
-use Any::Moose;
+use Moo;
 extends 'Prophet::CLI::Command::Log';
 
 use App::SD::CLI::Command::Ticket::Show;
@@ -94,5 +94,3 @@ sub change_header_ticket {
       . ( $t->prop('summary') || '' ) . ")";
 }
 
-__PACKAGE__->meta->make_immutable;
-no Any::Moose;

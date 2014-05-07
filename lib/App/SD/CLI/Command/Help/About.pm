@@ -1,5 +1,5 @@
 package App::SD::CLI::Command::Help::About;
-use Any::Moose;
+use Moo;
 extends 'App::SD::CLI::Command::Help';
 
 sub run {
@@ -30,9 +30,6 @@ community. For license details, type:
 EOF
 
 }
-
-__PACKAGE__->meta->make_immutable;
-no Any::Moose;
 
 1;
 

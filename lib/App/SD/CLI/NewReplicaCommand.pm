@@ -139,7 +139,5 @@ sub _prompt_edit_settings {
     }
 }
 
-no Any::Moose;
-
 1;
 

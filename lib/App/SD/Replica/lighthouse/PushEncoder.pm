@@ -1,5 +1,5 @@
 package App::SD::Replica::lighthouse::PushEncoder;
-use Any::Moose;
+use Moo;
 use Params::Validate;
 use Path::Class;
 
@@ -182,8 +182,5 @@ sub _recode_props_for_integrate {
     $attr{body} ||= '';
     return \%attr;
 }
-
-__PACKAGE__->meta->make_immutable;
-no Any::Moose;
 
 1;

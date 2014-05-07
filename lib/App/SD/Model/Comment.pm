@@ -1,5 +1,5 @@
 package App::SD::Model::Comment;
-use Any::Moose;
+use Moo;
 extends 'App::SD::Record';
 
 use constant collection_class => 'App::SD::Collection::Comment';
@@ -24,6 +24,4 @@ sub canonicalize_props {
 
 __PACKAGE__->register_reference( ticket => 'App::SD::Model::Ticket' );
 
-__PACKAGE__->meta->make_immutable;
-no Any::Moose;
 1;

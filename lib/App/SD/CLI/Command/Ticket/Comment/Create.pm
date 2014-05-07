@@ -1,5 +1,5 @@
 package App::SD::CLI::Command::Ticket::Comment::Create;
-use Any::Moose;
+use Moo;
 
 extends 'Prophet::CLI::Command::Create';
 with 'App::SD::CLI::Model::TicketComment';
@@ -36,9 +36,6 @@ sub run {
     $self->set_prop( content => $content );
     $self->SUPER::run(@_);
 }
-
-__PACKAGE__->meta->make_immutable;
-no Any::Moose;
 
 1;
 

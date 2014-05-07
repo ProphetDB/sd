@@ -1,5 +1,5 @@
 package App::SD::CLI::Command::Help::Environment;
-use Any::Moose;
+use Moo;
 extends 'App::SD::CLI::Command::Help';
 
 sub run {
@@ -18,7 +18,7 @@ configuration. Example syntax is for bash-like shells.
     export PROPHET_EMAIL=jesse\@example.com
       Use 'jesse\@example.com' as the creator of changesets. Prophet
       will use EMAIL if PROPHET_EMAIL isn't defined.
-        
+
     export SD_CONFIG=/path/to/sd/config/file
       Specify where the configuration file SD is using should reside.
       If this variable is specified, no other config file will be
@@ -43,9 +43,6 @@ For information on SD database configuration files, see '${cmd}help config'.
 EOF
 
 }
-
-__PACKAGE__->meta->make_immutable;
-no Any::Moose;
 
 1;
 

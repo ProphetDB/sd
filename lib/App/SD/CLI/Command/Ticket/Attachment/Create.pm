@@ -1,5 +1,5 @@
 package App::SD::CLI::Command::Ticket::Attachment::Create;
-use Any::Moose;
+use Moo;
 extends 'App::SD::CLI::Command::Attachment::Create';
 
 sub ARG_TRANSLATIONS { shift->SUPER::ARG_TRANSLATIONS(), f => 'file' }
@@ -24,9 +24,6 @@ sub run {
     $self->set_prop( ticket => $self->uuid );
     $self->SUPER::run(@_);
 }
-
-__PACKAGE__->meta->make_immutable;
-no Any::Moose;
 
 1;
 

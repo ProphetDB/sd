@@ -1,5 +1,5 @@
 package App::SD::Replica::redmine;
-use Any::Moose;
+use Moo;
 
 extends 'App::SD::ForeignReplica';
 

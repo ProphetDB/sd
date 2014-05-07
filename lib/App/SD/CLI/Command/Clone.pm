@@ -1,5 +1,5 @@
 package App::SD::CLI::Command::Clone;
-use Any::Moose;
+use Moo;
 extends 'Prophet::CLI::Command::Clone';
 with 'App::SD::CLI::NewReplicaCommand';
 
@@ -42,9 +42,6 @@ override run => sub {
     # cloned database should have already been setup previously.
     $self->new_replica_wizard( edit_settings => 0 );
 };
-
-__PACKAGE__->meta->make_immutable;
-no Any::Moose;
 
 1;
 

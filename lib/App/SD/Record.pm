@@ -1,5 +1,5 @@
 package App::SD::Record;
-use Any::Moose;
+use Moo;
 use Params::Validate;
 
 extends 'Prophet::Record';
@@ -33,8 +33,5 @@ sub canonicalize_prop_created {
     }
     return 1;
 }
-
-__PACKAGE__->meta->make_immutable;
-no Any::Moose;
 
 1;

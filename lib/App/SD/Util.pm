@@ -1,5 +1,5 @@
 package App::SD::Util;
-use Any::Moose;    # for warnings and strict at the least
+use Moo;    # for warnings and strict at the least
 use DateTime;
 use Params::Validate qw/:all/;
 
@@ -92,5 +92,4 @@ sub string_to_datetime {
     return;
 }
 
-no Any::Moose;
 1;

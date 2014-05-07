@@ -1,5 +1,5 @@
 package App::SD::CLI::Command::Help::Config;
-use Any::Moose;
+use Moo;
 extends 'App::SD::CLI::Command::Help';
 
 sub run {
@@ -103,9 +103,6 @@ For information on environmental variables that can affect SD, see
 EOF
 
 }
-
-__PACKAGE__->meta->make_immutable;
-no Any::Moose;
 
 1;
 

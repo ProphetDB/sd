@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 package App::SD::CLI;
-use Any::Moose;
+use Moo;
 extends 'Prophet::CLI';
 
 use App::SD;
@@ -78,9 +78,6 @@ sub format_prop_changes {
     }
     return $output;
 }
-
-__PACKAGE__->meta->make_immutable;
-no Any::Moose;
 
 1;
 

@@ -271,7 +271,5 @@ sub parse_record_template {
     return \%new_props, $comment;
 }
 
-no Any::Moose;
-
 1;
 

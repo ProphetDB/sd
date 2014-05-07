@@ -1,5 +1,5 @@
 package App::SD::CLI::Command::Help::Authors;
-use Any::Moose;
+use Moo;
 extends 'App::SD::CLI::Command::Help';
 
 sub run {
@@ -20,9 +20,6 @@ Simon Wistow <simon\@thegestalt.org>
 EOF
 
 }
-
-__PACKAGE__->meta->make_immutable;
-no Any::Moose;
 
 1;
 

@@ -1,5 +1,5 @@
 package App::SD::CLI::Command::Help::ticket_summary_format;
-use Any::Moose;
+use Moo;
 extends 'App::SD::CLI::Command::Help';
 
 sub run {
@@ -59,9 +59,6 @@ http://perldoc.perl.org/functions/sprintf.html.
 EOF
 
 }
-
-__PACKAGE__->meta->make_immutable;
-no Any::Moose;
 
 1;
 

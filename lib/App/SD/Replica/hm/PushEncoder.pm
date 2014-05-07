@@ -1,5 +1,5 @@
 package App::SD::Replica::hm::PushEncoder;
-use Any::Moose;
+use Moo;
 
 extends 'App::SD::ForeignReplica::PushEncoder';
 
@@ -333,8 +333,5 @@ sub translate_props {
     }
     return %props;
 }
-
-__PACKAGE__->meta->make_immutable;
-no Any::Moose;
 
 1;

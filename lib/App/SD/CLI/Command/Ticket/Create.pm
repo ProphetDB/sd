@@ -1,5 +1,5 @@
 package App::SD::CLI::Command::Ticket::Create;
-use Any::Moose;
+use Moo;
 
 use Params::Validate qw/validate/;
 extends 'Prophet::CLI::Command::Create';
@@ -86,8 +86,5 @@ sub process_template {
 
     return 1;
 }
-
-__PACKAGE__->meta->make_immutable;
-no Any::Moose;
 
 1;

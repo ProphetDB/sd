@@ -1,5 +1,5 @@
 package App::SD::CLI::Command::Ticket::Comments;
-use Any::Moose;
+use Moo;
 
 extends 'Prophet::CLI::Command::Search';
 with 'Prophet::CLI::RecordCommand';
@@ -37,9 +37,6 @@ sub run {
         print "No comments found\n";
     }
 }
-
-__PACKAGE__->meta->make_immutable;
-no Any::Moose;
 
 1;
 

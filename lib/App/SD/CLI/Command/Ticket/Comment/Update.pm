@@ -1,5 +1,5 @@
 package App::SD::CLI::Command::Ticket::Comment::Update;
-use Any::Moose;
+use Moo;
 
 extends 'Prophet::CLI::Command::Update';
 
@@ -25,8 +25,5 @@ override run => sub {
         super();
     }
 };
-
-__PACKAGE__->meta->make_immutable;
-no Any::Moose;
 
 1;

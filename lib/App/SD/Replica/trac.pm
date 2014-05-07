@@ -1,5 +1,5 @@
 package App::SD::Replica::trac;
-use Any::Moose;
+use Moo;
 extends qw/App::SD::ForeignReplica/;
 
 use Params::Validate qw(:all);
@@ -129,8 +129,5 @@ sub database_settings {
         statuses        => [ @active_statuses, 'closed', @resolutions ],
     };
 }
-
-__PACKAGE__->meta->make_immutable;
-no Any::Moose;
 
 1;

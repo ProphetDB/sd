@@ -1,5 +1,5 @@
 package App::SD::Replica::gcode;
-use Any::Moose;
+use Moo;
 extends qw/App::SD::ForeignReplica/;
 
 use Params::Validate qw(:all);
@@ -150,8 +150,5 @@ sub _uuid_url {
     my $self = shift;
     return $self->remote_url;
 }
-
-__PACKAGE__->meta->make_immutable;
-no Any::Moose;
 
 1;

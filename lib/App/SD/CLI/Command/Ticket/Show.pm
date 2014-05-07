@@ -1,5 +1,5 @@
 package App::SD::CLI::Command::Ticket::Show;
-use Any::Moose;
+use Moo;
 extends 'Prophet::CLI::Command::Show';
 with 'App::SD::CLI::Command';
 with 'App::SD::CLI::Model::Ticket';
@@ -185,8 +185,5 @@ sub history_entry_header {
     print "-" x 80;
     print "\n";
 }
-
-__PACKAGE__->meta->make_immutable;
-no Any::Moose;
 
 1;

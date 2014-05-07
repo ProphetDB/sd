@@ -1,5 +1,5 @@
 package App::SD::Replica::rt::PullEncoder;
-use Any::Moose;
+use Moo;
 use strict;
 extends 'App::SD::ForeignReplica::PullEncoder';
 
@@ -647,6 +647,4 @@ sub translate_prop_names {
     return $changeset;
 }
 
-__PACKAGE__->meta->make_immutable;
-no Any::Moose;
 1;

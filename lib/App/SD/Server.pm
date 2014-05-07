@@ -1,5 +1,5 @@
 package App::SD::Server;
-use Any::Moose;
+use Moo;
 extends 'Prophet::Server';
 
 has with_browser => (
@@ -88,6 +88,5 @@ sub open_url_cmd {
     }
 }
 
-no Any::Moose;
 1;
 

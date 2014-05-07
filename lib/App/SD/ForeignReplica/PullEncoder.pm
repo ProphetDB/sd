@@ -1,5 +1,5 @@
 package App::SD::ForeignReplica::PullEncoder;
-use Any::Moose;
+use Moo;
 use App::SD::Util;
 use Params::Validate qw/validate/;
 
@@ -165,6 +165,4 @@ sub new_comment_creation_change {
     );
 }
 
-__PACKAGE__->meta->make_immutable;
-no Any::Moose;
 1;

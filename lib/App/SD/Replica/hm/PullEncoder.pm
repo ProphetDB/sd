@@ -1,5 +1,5 @@
 package App::SD::Replica::hm::PullEncoder;
-use Any::Moose;
+use Moo;
 extends 'App::SD::ForeignReplica::PullEncoder';
 use Params::Validate qw(:all);
 use Memoize;
@@ -322,6 +322,4 @@ sub translate_ticket_state {
     return $props, $translated;
 
 }
-__PACKAGE__->meta->make_immutable;
-no Any::Moose;
 1;

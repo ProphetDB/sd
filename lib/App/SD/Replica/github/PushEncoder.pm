@@ -1,5 +1,5 @@
 package App::SD::Replica::github::PushEncoder;
-use Any::Moose;
+use Moo;
 use Params::Validate;
 use Path::Class;
 
@@ -155,8 +155,5 @@ sub _recode_props_for_integrate {
     }
     return \%attr;
 }
-
-__PACKAGE__->meta->make_immutable;
-no Any::Moose;
 
 1;

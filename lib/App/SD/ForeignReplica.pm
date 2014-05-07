@@ -2,7 +2,7 @@ package App::SD::ForeignReplica;
 
 # ABSTRACT: Base class for foreign replicas
 
-use Any::Moose;
+use Moo;
 use Params::Validate qw/:all/;
 
 use Try::Tiny;
@@ -107,7 +107,7 @@ sub integrate_change {
     $recoder->integrate_change( $change, $changeset );
 }
 
-=method record_pushed_transactions( $ticket, $changeset, $start_time) 
+=method record_pushed_transactions( $ticket, $changeset, $start_time)
 
 Walk the set of transactions on the ticket whose id you've passed in, looking
 for updates by the 'current user' which happened after start_time and before
@@ -422,7 +422,7 @@ Saves username and password to the replica's configuration file upon successful
 login.
 
 =for :list
-* uri        
+* uri
 login url
 * username
 optional; a pre-seeded username
@@ -430,16 +430,16 @@ optional; a pre-seeded username
 optional; a pre-seeded password
 * username_prompt
 optional; custom username prompt
-* secret_prompt  
+* secret_prompt
 optional; custom secret prompt
 * login_callback
 coderef of code that attempts login;
 should throw exception on error
-* oauth_callback  
+* oauth_callback
 coderef of code that returns an oauth token;
 should throw exception on error
 * catch_callback
-optional; process thrown exception message (e.g. munge 
+optional; process thrown exception message (e.g. munge
 in some way and then print to STDERR)
 
 returns: ($username, $password)
@@ -539,8 +539,5 @@ sub extract_auth_from_uri {
 sub foreign_username {
     die "replica class must implement foreign_username";
 }
-
-__PACKAGE__->meta->make_immutable;
-no Any::Moose;
 
 1;

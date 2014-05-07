@@ -1,5 +1,5 @@
 package App::SD::CLI::Command::Help::Attachments;
-use Any::Moose;
+use Moo;
 extends 'App::SD::CLI::Command::Help';
 
 sub run {
@@ -28,9 +28,6 @@ sub run {
 EOF
 
 }
-
-__PACKAGE__->meta->make_immutable;
-no Any::Moose;
 
 1;
 

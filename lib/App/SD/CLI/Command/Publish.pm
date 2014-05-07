@@ -1,5 +1,5 @@
 package App::SD::CLI::Command::Publish;
-use Any::Moose;
+use Moo;
 extends 'Prophet::CLI::Command::Publish';
 use Prophet::Util;
 use File::Path;
@@ -143,7 +143,7 @@ sub work_with_urls {
 
         # generally, if the link is not absolute, we need to find it.
         if ( $link !~ m{^/} ) {
-            my $depth = $link =~ s{\.\./}{}g;
+            my $depth    = $link =~ s{\.\./}{}g;
             my @tmp_dirs = @dirs;
 
             # remove trailing dirs according to $depth
@@ -200,11 +200,8 @@ sub write_file {
 
 }
 
-__PACKAGE__->meta->make_immutable;
-no Any::Moose;
-
 package App::SD::Server::Static;
-use Any::Moose;
+use Moo;
 extends 'App::SD::Server';
 use Params::Validate;
 use JSON;
@@ -231,9 +228,6 @@ sub _send_redirect {
 }
 
 sub _send_404 { }
-
-__PACKAGE__->meta->make_immutable;
-no Any::Moose;
 
 1;
 

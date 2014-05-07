@@ -1,5 +1,5 @@
 package App::SD::Replica::gcode::PushEncoder;
-use Any::Moose;
+use Moo;
 use Params::Validate;
 use Net::Google::Code::Issue;
 use Net::Google::Code;
@@ -204,8 +204,5 @@ sub _recode_props_for_integrate {
     }
     return \%attr;
 }
-
-__PACKAGE__->meta->make_immutable;
-no Any::Moose;
 
 1;

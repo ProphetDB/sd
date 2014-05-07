@@ -1,5 +1,5 @@
 package App::SD::Replica::hm;
-use Any::Moose;
+use Moo;
 extends 'App::SD::ForeignReplica';
 use Params::Validate qw(:all);
 use Memoize;
@@ -231,6 +231,4 @@ sub property_map {
     }
 }
 
-__PACKAGE__->meta->make_immutable;
-no Any::Moose;
 1;

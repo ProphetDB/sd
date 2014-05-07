@@ -1,5 +1,5 @@
 package App::SD::CLI::Command::Attachment::Create;
-use Any::Moose;
+use Moo;
 extends 'Prophet::CLI::Command::Create';
 with 'App::SD::CLI::Model::Attachment';
 with 'App::SD::CLI::Command';
@@ -17,9 +17,6 @@ sub run {
     $self->set_prop( content => $content );
     $self->SUPER::run(@_);
 }
-
-__PACKAGE__->meta->make_immutable;
-no Any::Moose;
 
 1;
 

@@ -1,5 +1,5 @@
 package App::SD::Replica::github::PullEncoder;
-use Any::Moose;
+use Moo;
 extends 'App::SD::ForeignReplica::PullEncoder';
 
 use Params::Validate qw(:all);
@@ -325,6 +325,4 @@ sub resolve_user_id_to {
     return $email;
 }
 
-__PACKAGE__->meta->make_immutable;
-no Any::Moose;
 1;

@@ -1,7 +1,7 @@
 #!/usr/bin/env perl
 package App::SD::CLI::Dispatcher;
 use Prophet::CLI::Dispatcher -base;
-use Any::Moose;
+use Moo;
 require Prophet::CLIContext;
 use File::Basename;
 
@@ -234,9 +234,6 @@ on qr/^(.*)$/ => sub {
 };
 
 sub run_command { Prophet::CLI::Dispatcher::run_command(@_) }
-
-__PACKAGE__->meta->make_immutable;
-no Any::Moose;
 
 1;
 

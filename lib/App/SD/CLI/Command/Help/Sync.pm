@@ -1,5 +1,5 @@
 package App::SD::CLI::Command::Help::Sync;
-use Any::Moose;
+use Moo;
 extends 'App::SD::CLI::Command::Help';
 
 sub run {
@@ -14,7 +14,7 @@ sub run {
       http, ftp or file URL.
 
     ${cmd}pull --from http://example.com/path/to/sd
-      Integrate changes from a published SD replica over http, ftp or 
+      Integrate changes from a published SD replica over http, ftp or
       file URL.
 
     ${cmd}pull --all (or -a)
@@ -33,8 +33,8 @@ sub run {
       to a remote server using rsync.
 
     ${cmd}server --port 9876
-      Start an sd replica server on port 9876. This command will make your 
-      replica browsable and pullable by anyone with remote access to your 
+      Start an sd replica server on port 9876. This command will make your
+      replica browsable and pullable by anyone with remote access to your
       computer. Changes will only be accepted from the local machine.
 
       To clone from this replica use:
@@ -47,20 +47,20 @@ sub run {
       Do the same as the server command, but also open up the server's
       front page in your browser.
 
-SD can sync to external systems as well as itself. Currently, there 
+SD can sync to external systems as well as itself. Currently, there
 are foreign replica types for:
 
     RT (http://bestpractical.com/rt)
     Hiveminder (http://hiveminder.com/)
     Trac (http://trac.edgewall.com)
     Google Code (http://code.google.com)
-    GitHub (http://github.com). 
+    GitHub (http://github.com).
 
 Read-only support is available for:
 
      Redmine (http://redmine.org)
 
-If you're interested in building a replica type for your bug 
+If you're interested in building a replica type for your bug
 tracker, you should get in touch with SD's developers (see
 http://syncwith.us/contact).
 
@@ -127,9 +127,6 @@ EOF
 #   PUBLIC WRITE ACCESS via HTTP POST.  This command will make your
 #   replica modifiable, browsable and pullable by ANYONE with remote
 #   access to your computer.
-
-__PACKAGE__->meta->make_immutable;
-no Any::Moose;
 
 1;
 

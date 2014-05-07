@@ -1,5 +1,5 @@
 package App::SD::Model::Ticket;
-use Any::Moose;
+use Moo;
 extends 'App::SD::Record';
 
 use Term::ANSIColor;
@@ -273,6 +273,4 @@ sub is_overdue {
     return 0;
 }
 
-__PACKAGE__->meta->make_immutable;
-no Any::Moose;
 1;

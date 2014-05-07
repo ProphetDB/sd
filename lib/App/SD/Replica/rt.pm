@@ -1,5 +1,5 @@
 package App::SD::Replica::rt;
-use Any::Moose;
+use Moo;
 extends qw/App::SD::ForeignReplica/;
 
 use Params::Validate qw(:all);
@@ -134,9 +134,9 @@ apply a single changeset that's part of the push:     - for each record in that
 changeset:         - pull the record's txn list from the server         - for
 each txn we don't know we've already seen, look at it             - if it is
 from the changeset we just pushed, then                 store the id of the new
-transaction and originating uuid in the push-ticket store.                    
-- does that let us specify individual txns? or is it a high-water mark?        
-     - if it is _not_ from the changeset we just pushed, then                 
+transaction and originating uuid in the push-ticket store.
+- does that let us specify individual txns? or is it a high-water mark?
+     - if it is _not_ from the changeset we just pushed, then
 do we just ignore it?                 how do we mark an out-of-order
 transaction as not-pulled?
 
@@ -154,8 +154,5 @@ SD::Source::RT->recode_ticket
 
 
 =cut
-
-__PACKAGE__->meta->make_immutable;
-no Any::Moose;
 
 1;

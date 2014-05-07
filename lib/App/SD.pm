@@ -2,7 +2,7 @@ package App::SD;
 
 # ABSTRACT: Distributed ticket tracking system
 
-use Any::Moose;
+use Moo;
 use App::SD::Config;
 
 extends 'Prophet::App';
@@ -60,9 +60,6 @@ sub database_settings {
     };
 }
 
-__PACKAGE__->meta->make_immutable;
-
-no Any::Moose;
 1;
 
 __END__

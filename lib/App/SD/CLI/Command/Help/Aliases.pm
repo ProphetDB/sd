@@ -1,5 +1,5 @@
 package App::SD::CLI::Command::Help::Aliases;
-use Any::Moose;
+use Moo;
 extends 'App::SD::CLI::Command::Help';
 
 sub run {
@@ -67,9 +67,6 @@ For more information on local configuration files, see '${cmd}help config'.
 EOF
 
 }
-
-__PACKAGE__->meta->make_immutable;
-no Any::Moose;
 
 1;
 

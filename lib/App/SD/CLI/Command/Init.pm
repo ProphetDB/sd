@@ -1,5 +1,5 @@
 package App::SD::CLI::Command::Init;
-use Any::Moose;
+use Moo;
 extends 'Prophet::CLI::Command::Init';
 with 'App::SD::CLI::NewReplicaCommand';
 
@@ -31,9 +31,6 @@ override run => sub {
 
     $self->new_replica_wizard();
 };
-
-__PACKAGE__->meta->make_immutable;
-no Any::Moose;
 
 1;
 

@@ -68,7 +68,5 @@ sub get_content {
     return $content;
 }
 
-no Any::Moose;
-
 1;
 

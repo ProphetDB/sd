@@ -1,5 +1,5 @@
 package App::SD::Replica::trac::PushEncoder;
-use Any::Moose;
+use Moo;
 use Params::Validate;
 use Time::HiRes qw/usleep/;
 
@@ -122,8 +122,5 @@ sub _recode_props_for_integrate {
     }
     return \%attr;
 }
-
-__PACKAGE__->meta->make_immutable;
-no Any::Moose;
 
 1;
